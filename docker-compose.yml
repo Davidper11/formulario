@@ -11,8 +11,8 @@ services:
   db:
     image: mysql:8.0
     environment: 
-    MYSQL_ROOT_PASSWORD: root
-    MYSQL_DATABASE: tienda  
+      - MYSQL_ROOT_PASSWORD: root
+      - MYSQL_DATABASE: tienda  
     volumes:
       - mysql_data:/var/lib/mysql 
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
